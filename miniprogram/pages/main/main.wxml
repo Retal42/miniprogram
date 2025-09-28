@@ -1,0 +1,70 @@
+<!--pages/main/main.wxml-->
+<view class="bg">
+    <image class="bg-img" src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/bg-img/mainbg.png" ></image>
+</view>
+<view class="container">
+    <view class="content" wx:for="{{databtn1}}">
+        <button class='btn1' data-index="{{index}}" bindtap="Popup">
+            <image class="btnImg1" src="{{databtn1[index].src}}" mode="widthFix"></image>
+            <view class="btnTxt">{{databtn1[index].id}}{{txtbtn1[index]}}</view>
+        </button>
+        <!--<button class='btn1' bindtap="Popup">
+            <image class="btnImg1" src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/mainIcon/prod.png" mode="widthFix"></image>
+            <view class="btnTxt">生产间:{{locationtxt}}</view>
+        </button>
+        <button class='btn1' bindtap="Popup">
+            <image class="btnImg1" src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/mainIcon/id.png" mode="widthFix"></image>
+            <view class="btnTxt">作物:{{locationtxt}}</view>
+        </button>
+        <button class='btn1' bindtap="Popup">
+            <image class="btnImg1" src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/mainIcon/med1.png" mode="widthFix"></image>
+            <view class="btnTxt">药物:{{locationtxt}}</view>
+        </button>
+        <button class='btn1' bindtap="Popup">
+            <image class="btnImg1" src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/mainIcon/dev1.png" mode="widthFix"></image>
+            <view class="btnTxt">器械1:{{locationtxt}}</view>
+        </button>
+        <button class='btn1' bindtap="Popup">
+            <image class="btnImg1" src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/mainIcon/dev1.png" mode="widthFix"></image>
+            <view class="btnTxt">器械2:{{locationtxt}}</view>
+        </button>-->
+    </view>
+    <button class="btn-start" bindtap="getRes">开始</button>
+</view>
+<!--点击后灰色背景的设置-->
+<view wx:if="{{now_state}}" class="background" bindtap="hideModal"></view>
+<!-- 弹窗 -->
+<view animation="{{animationData}}" class="box" wx:if="{{now_state}}">
+<!--弹窗内容-->
+<scroll-view scroll-y style="height: 100%;" class="row" enable-flex="true" wx:if="{{addr}}">
+    <view wx:for="{{addr1}}" class="btn-row">
+        <button class="button2" bindtap="switch" data-index="{{addr1[index]}}">{{addr1[index]}}</button>
+    </view>
+</scroll-view>
+<scroll-view scroll-y style="height: 100%;" class="row" enable-flex="true" wx:if="{{prod}}">
+    <view wx:for="{{prod1}}" class="btn-row">
+        <button class="button2" bindtap="switch" data-index="{{prod1[index]}}">{{prod1[index]}}</button>
+    </view>
+</scroll-view>
+<scroll-view scroll-y style="height: 100%;" class="row" enable-flex="true" wx:if="{{id}}">
+    <view wx:for="{{id1}}" class="btn-row">
+        <button class="button2" bindtap="switch" data-index="{{id1[index]}}">{{id1[index]}}</button>
+    </view>
+</scroll-view>
+<scroll-view scroll-y style="height: 100%;" class="row" enable-flex="true" wx:if="{{med}}">
+    <view wx:for="{{med1}}" class="btn-row">
+        <button class="button2" bindtap="switch" data-index="{{med1[index]}}">{{med1[index]}}</button>
+    </view>
+</scroll-view>
+<scroll-view scroll-y style="height: 100%;" class="row" enable-flex="true" wx:if="{{dev1}}">
+    <view wx:for="{{dev}}" class="btn-row">
+        <button class="button2" bindtap="switch" data-index="{{dev[index]}}">{{dev[index]}}</button>
+    </view>
+</scroll-view>
+<scroll-view scroll-y style="height: 100%;" class="row" enable-flex="true" wx:if="{{dev2}}">
+    <view wx:for="{{dev}}" class="btn-row">
+        <button class="button2" bindtap="switch" data-index="{{dev[index]}}">{{dev[index]}}</button>
+    </view>
+</scroll-view>
+</view>
+

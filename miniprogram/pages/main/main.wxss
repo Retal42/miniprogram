@@ -1,0 +1,99 @@
+/* pages/main/main.wxss */
+.background{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;/*top=0和left=0的作用是确认组件4个定点的一个坐标，如果不进行确认则该组件前面的组件会影响它*/
+    left: 0;
+    background: #000;
+    opacity: 0.2;/*设置背景的透明度（取值范围为0~1）*/
+    overflow: hidden;/*该属性的功能是隐藏溢出，就是当我们现在的这个组件里面有其他组件，并且其他组件的宽或者高大于我们当前组件的宽或高时（按照正常情况，父组件的宽高都为0，没有被子组件撑起来，故不会显示），正常显示子组件，并同时正常显示父组件*/
+    z-index: 1000;/*堆叠顺序,有时候我们设置的组件可能会有重叠的部分，那重叠的部分到底是显示哪一个组件呢？这就得靠我们的z-index属性了，z-index的属性值越高则它就越容易显示在我们的页面。注意点：只有在我们设置了position属性时，z-index才会起效果，否则是不会出现效果的*/
+  }
+  .box{
+      height: 60%;
+      width: 100%;
+      overflow: hidden;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 2000;
+      background: #D8BFD8;
+  }
+.bg{
+    position:relative;
+    height:100%;
+}
+.bg-img{
+    width:100%;
+    height: 100%;
+}
+.container{
+    margin-top: 3%;
+    position: absolute;
+    width: 100%;
+    height: 97%;
+    align-items: center;
+}
+.content{
+    height:10%;
+    width: 75%;
+    margin-top:3.5%;
+}
+.btn1{
+    width:100% ;
+    height: 100%;
+    border: #000;
+    border-radius: 10rpx;
+    box-shadow: 4rpx 4rpx 4rpx 4rpx gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.btn1::after{
+    border-width: 5rpx;
+}
+.btnImg1 {
+    width: 11%;
+}
+.btn-start{
+    margin-top: 10%;
+    width: 50%;
+    border-radius: 30rpx;
+    background-color: #008B8B;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 40rpx;
+}
+.btnTxt{
+    margin-left: 30rpx;
+    font-size: 32rpx;
+}
+.test{
+    position:absolute;
+    margin-bottom: 10rpx;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.btn-row{
+    width: 50%;
+}
+.button2{
+    margin-left: 20rpx;
+    margin-right: 10rpx;
+    margin-top: 10rpx;
+    width: 90%;
+    height: 100rpx;
+    background-color: #F8F8FF;
+    font-size: 30rpx;
+    line-height: 100rpx;
+}
+.button2::after{
+    border:2px solid #000;
+}
+page{
+    height: 100%;
+    width:100%;
+}

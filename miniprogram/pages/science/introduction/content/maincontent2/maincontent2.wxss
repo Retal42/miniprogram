@@ -1,0 +1,29 @@
+/* pages/science/introduction/device/device1/device1.wxss *//* pages/science/introduction/device/device1/device1.wxss */
+.title{
+    font-size: 50rpx;
+    font-weight: bold;
+    font-family: SCIENCE;
+    position: relative;
+    left:40rpx;
+}
+.picture1{
+    width:80%;
+    position:relative;
+    left:64rpx;
+}
+.daoyan{
+  width:90%;
+  font-size:30rpx;
+  font-family: SCIENCE;
+  color:rgb(88, 88, 88);
+  position: relative;
+  left:40rpx;
+}
+.zhengwen1{
+  width:95%;
+  font-size:30rpx;
+  font-family: SCIENCE;
+  color:rgb(51, 49, 49);
+  position: relative;
+  left:20rpx;
+}

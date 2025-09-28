@@ -1,0 +1,21 @@
+<!--pages/science/introduction/onclick/onclick4/onclick4.wxml-->
+<wxs src="../../../../utils/filter.wxs" module="tools" /> 
+<view class="title">农业功勋人物</view>
+<view class="status-alarm">
+    <view class="line-row" wx:for="{{peopleArr}}" wx:key="index">
+        <view class="onedot {{index===0?'dotSS':''}}"></view>
+        <view wx:if="{{index!=lineArr.length-1}}" class="oneline"></view>
+        <view wx:else class="oneline oneline1"></view>
+        <view class="maintext {{index===0?'maintext':''}}">
+            <view class="maintitle"><text wx:if="{{item.name}}">{{item.name}}</text></view>
+            <view class="maintextS"><text wx:if="{{item.daoyan}}">{{item.daoyan}}</text></view>
+            <image class="picture" mode='widthFix' wx:if="{{item.picture}}" src="{{item.picture}}"></image>
+            <view class="zhengwen">
+            <text wx:if="{{item.zhengwen}}" >
+            <text space="emsp">
+            <text decode='true'>&nbsp;{{tools.N_Filter(item.zhengwen)}}
+            </text></text></text></view>
+        </view>
+    </view>
+ </view>
+ 

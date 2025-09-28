@@ -1,0 +1,81 @@
+
+  <!-- modal弹窗 -->
+<modalView show="{{showModal}}" title="关于" bindcancel="modalCancel" bindconfirm='modalConfirm' confirmText='确定' bgurl="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/bg-img/showboxbg.png">
+    <view class='modal-content'>
+    <scroll-view scroll-y class='main-content'>
+        <view>{{intro}}</view>
+    </scroll-view>
+    </view>
+</modalView>
+<modalView show="{{showModal2}}" title="历史记录(倒序)" bindcancel="modalCancel" bindconfirm='modalConfirm' confirmText='确定' bgurl="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/bg-img/showboxbg.png">
+    <view class='modal-content'>
+    <scroll-view scroll-y class='main-content2' wx:for="{{history}}">
+        <view>{{history[index]}}</view>
+    </scroll-view>
+    </view>
+</modalView>
+<block wx:if="{{!userInfo}}">
+  <!-- 登录区域 -->
+  <view class="bg">
+    <image class="bg-img" src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/bg-img/logbg.png" ></image>
+    <view class="login-container">
+        <image src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/Icon/logInfo.png" class="contact-filled" mode="widthFix"></image>
+        <button class="btn-login" bindtap="login">一键登录</button>
+        <text class="tip-text">登录后尽享更多权益</text>
+    </view>
+  </view>
+</block>
+
+<block wx:else>
+  <view class="bg">
+    <image class="bg-img" src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/bg-img/minebg.png" ></image>
+    <view class="user">
+    <!-- 头像昵称区域 -->
+    <view wx:if="{{showInfo}}">
+        <view class="top-box">
+            <image src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/test.png" class="avatar"></image>
+            <view class="nickname">演示用户名</view>
+        </view>
+    </view>
+    <view wx:else>
+        <view class="user-above">
+            <view class="top-box">
+                <image src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/test.png" class="avatar"></image>
+                <view class="nickname">演示用户名</view>
+            </view>
+            <view class="experience">
+                <view>模拟次数：{{cnt}}</view>
+                <view>称号：{{tittle}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- 面板区域 -->
+    <view class="panel">
+        <view class="panel-list-item" bindtap="guide">
+        <text>使用教程</text>
+        <image src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/Icon/arrow.png"></image>
+        </view>
+
+        <view class="panel-list-item" bindtap="showhistory">
+        <text>历史记录</text>
+        <image src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/Icon/arrow.png"></image>
+        </view>
+
+        <view class="panel-list-item" bindtap="showus">
+        <text>关于我们</text>
+        <image src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/Icon/arrow.png"></image>
+        </view>
+
+        <view class="panel-list-item">
+        <button open-type='feedback'>意见反馈</button>
+        <image src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/Icon/arrow.png"></image>
+        </view>
+    </view>
+    <view class="logout">
+        <view wx:if="{{showInfo}}"><button class="show-info" bindtap="showingInfo">展示信息</button></view>
+        <view wx:else><button class="show-info" bindtap="hiddenInfo">隐藏信息</button></view>
+        <button class="btn-logout" bindtap="logout">退出登录</button>
+    </view>
+  </view>
+  </view>
+</block>

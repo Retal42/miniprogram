@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "guide": "/components/myguidance/myguidance"
+    },
+    "navigationBarTitleText": "指引"
+}

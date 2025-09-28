@@ -1,0 +1,12 @@
+<wxs src="../../../../utils/filter.wxs" module="tools" /> 
+<view class="title"><text>{{a}}</text></view>
+<view class="daoyan"><text>{{b}}</text></view>
+<image class="picture1" mode='widthFix' src="{{c}}"></image> 
+<view wx:for="{{d}}">
+<view class="zhengwen1"><text space="emsp">  {{d[index]}}</text></view>
+<view class="zhengwen2"><text space="emsp"><text decode='true'>&nbsp;{{tools.N_Filter(e[index])}}</text></text></view>
+<view wx:if="{{index<f.length}}"><image class="picture2" mode='widthFix' src="{{f[index]}}"></image>
+</view>
+</view>
+
+

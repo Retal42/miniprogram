@@ -1,0 +1,17 @@
+<!--pages/main/result/result.wxml-->
+<view class="bg">
+    <image class="bg-img" src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/bg-img/resbg.png" ></image>
+</view>
+<view class="container">
+    <view class="title">成绩单</view>
+    <view class="sum">{{gradeSum}}</view>
+    <view class="content">
+        <view class="item" wx:for="{{direct}}">
+            <view>{{direct[index]}}</view>
+            <view wx:if="{{grade[index]==20}}" style="color: #00FF00;">珠联璧合</view>
+            <view wx:elif="{{grade[index]==0}}" style="color: #FF0000;">毫不相干</view>
+            <view wx:else style="color: #0000FF;">中规中矩</view>
+        </view>
+        <button class="back" bindtap="return">返回</button>
+    </view>
+</view>

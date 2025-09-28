@@ -1,0 +1,42 @@
+page{
+    background-color:white;
+}
+.title{
+    font-size: 40rpx;
+    position: relative;
+    top:40rpx;
+    left:20rpx;
+}
+.picture1{
+    width:50%;
+    position:relative;
+    left:312rpx;
+    bottom:30rpx;
+}
+.daoyan{
+    width:100%;
+    font-size:20rpx;
+    color:#999;
+    position: relative;
+    top: 80rpx;
+    left:80rpx;
+}
+.zhengwen2{
+    font-size: 28rpx;
+    font-family: SCIENCE;
+    width:96%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.zhengwen1{
+    font-size:32rpx;
+    font-family: SCIENCE;
+    width:100%;
+    font-weight:bold;
+}
+.picture2{
+    width:99%;
+    position:relative;
+    left:2rpx;
+    top:0;
+}

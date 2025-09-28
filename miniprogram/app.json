@@ -1,0 +1,50 @@
+{
+    "pages": [
+        "pages/main/main",
+        "pages/mine/mine",
+        "pages/science/science",
+        "pages/main/result/result",
+        "pages/science/introduction/content/maincontent/maincontent",
+        "pages/science/introduction/content/maincontent2/maincontent2",
+        "pages/science/introduction/onclick/onclick1/onclick1",
+        "pages/science/introduction/onclick/onclick2/onclick2",
+        "pages/science/introduction/onclick/onclick3/onclick3",
+        "pages/science/introduction/onclick/onclick4/onclick4",
+        "pages/mine/guidance/guidance"
+    ],
+    "window": {
+        "navigationBarTitleText": "现代农业模拟器",
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#5F9EA0",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true
+    },
+    "tabBar": {
+        "backgroundColor": "#5F9EA0",
+        "selectedColor": "#FFFFFF",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/main/main",
+                "text": "模拟",
+                "iconPath": "/images/Icon1.png",
+                "selectedIconPath": "/images/Icon1.png"
+            },
+            {
+                "pagePath": "pages/science/science",
+                "text": "科普",
+                "iconPath": "/images/Icon2.png",
+                "selectedIconPath": "/images/Icon2.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的",
+                "iconPath": "/images/Icon3.png",
+                "selectedIconPath": "/images/Icon3.png"
+            }
+        ]
+    },
+    "lazyCodeLoading": "requiredComponents",
+    "sitemapLocation": "sitemap.json"
+}

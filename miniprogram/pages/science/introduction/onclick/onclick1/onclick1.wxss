@@ -1,0 +1,32 @@
+/* pages/science/introduction/onclick/onclick1/onclick1.wxss *//* pages/science/introduction/onclick/onclick1/onclick1.wxss */
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    top:20px;
+    left:10px;
+}
+.picture{
+    width:100%;
+    position:relative;
+    top:30px;
+}
+.daoyan{
+    width:100%;
+  font-size:13px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:rgb(88, 88, 88);
+  position: relative;
+  top: 60px;
+  left:20px;
+}
+.zhengwen{
+    width:95%;
+  font-size:15px;
+  font-family: cursive;
+  color:rgb(51, 49, 49);
+  position: relative;
+  top: 40px;
+  left:10px;
+}

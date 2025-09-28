@@ -1,0 +1,13 @@
+<!--pages/science/introduction/device/device1/device1.wxml-->
+<wxs src="../../../../utils/filter.wxs" module="tools" /> 
+<view wx:for="{{developArr}}" wx:key="index">
+            <view class="title"><text wx:if="{{item.title}}">{{item.title }}</text></view>
+            <view class="title"><text wx:if="{{item.name}}">{{item.name}}</text></view>
+            <view class="daoyan"><text wx:if="{{item.daoyan}}">{{item.daoyan}}</text></view>
+            <image class="picture1" mode='widthFix' wx:if="{{item.picture}}" src="{{item.picture}}"></image>
+            <view class="zhengwen1">
+            <text wx:if="{{item.zhengwen}}" >
+            <text space="emsp">
+            <text decode='true'>&nbsp;{{tools.N_Filter(item.zhengwen)}}
+            </text></text></text></view>
+        </view>

@@ -1,0 +1,8 @@
+<!--pages/science/introduction/onclick/onclick1/onclick1.wxml-->
+<wxs src="../../../../utils/filter.wxs" module="tools" /> 
+
+<view wx:for="{{Arr}}" class="item">
+        <view class="title"><text>{{item.title}}</text></view>
+        <image class="picture" mode='widthFix' src="{{item.picture}}"></image>
+        <view class="zhengwen"><text space="emsp"><text decode='true'>&nbsp;{{tools.N_Filter(item.zhengwen)}}</text></text></view>
+</view>

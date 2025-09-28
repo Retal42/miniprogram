@@ -1,0 +1,105 @@
+<!--pages/science/science.wxml-->
+<swiper autoplay="true" interval="2000" circular="true" indicator-dots="true" indicator-color="white" indicator-active-color="#aabbcc">
+    <swiper-item>
+    <image mode='widthFix' src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/轮播图/QQ图片20220627010516.jpg" bindtap="onclick1" class="s-image">
+    </image>
+  </swiper-item>
+  <swiper-item>
+    <image mode='widthFix' src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/轮播图/农业功勋人物.jpg" bindtap="onclick4" class="s-image">
+    </image>
+  </swiper-item>
+  <swiper-item>
+    <image mode='widthFix' src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/轮播图/农业重要历史节点.jpg" bindtap="onclick3" class="s-image">
+    </image>
+  </swiper-item>
+  <swiper-item>
+    <image mode='widthFix' src="cloud://cloud1-9gd5eqat4a153101.636c-cloud1-9gd5eqat4a153101-1311963630/轮播图/农业发展趋势.jpg" bindtap="onclick2" class="s-image">
+    </image>
+  </swiper-item>
+</swiper>
+<view class="nav_title">
+  <view class="nav_tab">
+    <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected">{{item}}
+      <view class="{{selected==index?'nav_underline':''}}"></view>
+    </view>
+  </view>
+  <!-- tab框显示内容 -->
+  <view class="tab_view" wx:if="{{selected == 0}}" style="height:{{winHeight - 40}}rpx">
+  <block wx:for="{{addrlist}}">
+    <view class='tview_Img'>
+       <image mode="wideFix" src="{{item.imag}}"></image>
+    </view>
+    <view class='tview_switch'>
+    <navigator url="{{item.url}}">{{item.addr}}</navigator>
+    </view>
+    <view class='tview_intro'>
+    <text>{{item.intro}}</text>
+    </view>
+    <view class='tview_biankuang'></view>
+  </block>
+  </view>
+
+
+  <view class="tab_view" wx:if="{{selected == 1}}" style="height:{{winHeight - 40}}rpx">
+  <block wx:for="{{prodlist}}">
+    <view class='tview_Img'>
+       <image mode="wideFix" src="{{item.imag}}"></image>
+    </view>
+    <view class='tview_switch'>
+    <navigator url="{{item.url}}">{{item.prod}}</navigator>
+    </view>
+    <view class='tview_intro'>
+    <text>{{item.intro}}</text>
+    </view>
+    <view class='tview_biankuang'></view>
+  </block>
+  </view>
+
+
+
+  <view class="tab_view" wx:if="{{selected == 2}}" style="height:{{winHeight - 40}}rpx">
+  <block wx:for="{{croplist}}">
+    <view class='tview_Img'>
+       <image mode="wideFix" src="{{item.imag}}"></image>
+    </view>
+    <view class='tview_switch'>
+    <navigator url="{{item.url}}">{{item.crop}}</navigator>
+    </view>
+    <view class='tview_intro'>
+    <text>{{item.intro}}</text>
+    </view>
+    <view class='tview_biankuang'></view>
+  </block>
+  </view>
+
+  <view class="tab_view" wx:if="{{selected == 3}}" style="height:{{winHeight - 40}}rpx">
+  <block wx:for="{{medicinelist}}">
+    <view class='tview_Img'>
+       <image mode="wideFix" src="{{item.imag}}"></image>
+    </view>
+    <view class='tview_switch'>
+    <navigator url="{{item.url}}">{{item.medicine}}</navigator>
+    </view>
+    <view class='tview_intro'>
+    <text>{{item.intro}}</text>
+    </view>
+    <view class='tview_biankuang'></view>
+  </block>
+  </view>
+
+
+  <view class="tab_view" wx:if="{{selected == 4}}" style="height:{{winHeight - 40}}rpx">
+  <block wx:for="{{devicelist}}">
+    <view class='tview_Img'>
+       <image mode="wideFix" src="{{item.imag}}"></image>
+    </view>
+    <view class='tview_switch'>
+    <navigator url="{{item.url}}">{{item.device}}</navigator>
+    </view>
+    <view class='tview_intro'>
+    <text>{{item.intro}}</text>
+    </view>
+    <view class='tview_biankuang'></view>
+  </block>
+  </view>
+  </view>
